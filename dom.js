@@ -9,3 +9,42 @@ console.log(article.previousElementSibling);
 
 const navLinks = document.querySelectorAll('a');
 
+const h1 = document.querySelector('h1');
+
+console.log(h1.textContent);
+console.log(h1.innerText);
+h1.textContent = "New Title";
+
+const article = document.querySelector("article");
+
+console.log(article.innerHTML);
+article.innerHTML = "<h2>New Article Title</h2><p>This is the updated content of the article.</p>";
+
+const userInput = "<script>alert('hack!');</script>";
+article.textContent =userInput;
+
+const link = document.querySelector('.nav-link');
+console.log(link.getAttribute('href'));
+console.log(link.href);
+link.setAttribute('href', 'https://www.example.com');
+link.href = 'https://www.example.com';
+console.log(link.hasAttribute('target'));
+link.removeAttribute('target');
+
+const element = document.querySelector('[data-id]');
+console.log(element.dataset.id);
+console.log(element.dataset.category);
+element.dataset.newAttr = 'value';
+
+const container = document.querySelector('.container');
+container.style.backgroundColor = 'lightblue';
+container.style.padding = '30px';
+container.style.borderRadius = '8px';
+
+object.assign(container.style, {
+  backgroundColor: 'lightblue',
+  padding: '30px',
+  color: 'darkblue',
+  fontSize: '18px',
+  textAlign: 'center'
+}); 
