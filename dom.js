@@ -48,3 +48,19 @@ object.assign(container.style, {
   fontSize: '18px',
   textAlign: 'center'
 }); 
+
+const newParagraph = document.createElement('p');
+newParagraph.textContent = "This is a new paragraph!";
+newParagraph.className = "content highlight";
+
+const article = document.querySelector('article');
+article.appendChild(newParagraph);
+
+const firstParagraph = article.querySelector('p');
+article.insertBefore(newParagraph, firstParagraph);
+
+article.prepend(newParagraph);
+article.append(newParagraph);
+firstParagraph.before(newParagraph);
+firstParagraph.after(newParagraph);
+
