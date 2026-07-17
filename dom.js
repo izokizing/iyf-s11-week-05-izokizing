@@ -74,3 +74,8 @@ lastLink.parentElement.removeChild(lastLink);
 while (article.firstChild) {
   article.removeChild(article.firstChild);
 }
+
+const navItems = document.querySelectorAll(".nav link").parentElement;
+const clone =navItems.cloneNode(true);
+clone.querySelector("a").textContent = "New Link";
+document.querySelector(".nav-list").appendChild(clone);
