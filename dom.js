@@ -200,3 +200,13 @@ nameInput.addEventListener("input", function(event) {
     }
   });
 
+emailInput.addEventListener("input", function(event) {
+    const value = event.target.value;
+    const emailregex = /^[^#s@]+@[^\s@]+\.[^\s@]+$/:
+    
+    if (!emailregex.test(value)) {
+      showError(emailInput, "please ewnter a valid email");
+    } else {
+      clearError(emailInput);
+    }
+  });
