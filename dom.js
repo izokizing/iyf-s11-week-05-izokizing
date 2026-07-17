@@ -79,3 +79,15 @@ const navItems = document.querySelectorAll(".nav link").parentElement;
 const clone =navItems.cloneNode(true);
 clone.querySelector("a").textContent = "New Link";
 document.querySelector(".nav-list").appendChild(clone);
+
+function addNavItem(text, href) {
+  const newNavItem = document.createElement("li");
+  const newLink = document.createElement("a");
+  newLink.textContent = text;
+  newLink.href = href;
+  newNavItem.appendChild(newLink);
+  document.querySelector(".nav-list").appendChild(newNavItem);
+}
+
+addNavItem("Blog", "/blog");
+addNavItem("portfolio", "/portfolio");
