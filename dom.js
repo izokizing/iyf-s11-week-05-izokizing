@@ -110,3 +110,26 @@ function handleClick() {
 button.addEventListener("click", handleClick);
 
 button.removeEventListener("click", handleClick);
+
+element.addEventListener("click", handler);
+element.addEventListener("dblclick", handler);
+element.addEventListener("mouseenter", handler);
+element.addEventListener("mouseleave", handler);
+element.addEventListener("mousemove", handler);
+
+
+input.addEventListener("keydown", handler);
+input.addEventListener("keyup", handler);
+input.addEventListener("keypress", handler);
+
+
+form.addEventListener("submit", handler);
+input.addEventListener("focus", handler);
+input.addEventListener("blur", handler);
+input.addEventListener("change", handler);
+input.addEventListener("input", handler);
+
+
+window.addEventListener("load", handler);
+window.addEventListener("resize", handler);
+window.addEventListener("scroll", handler);
