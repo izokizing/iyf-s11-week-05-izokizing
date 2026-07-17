@@ -133,3 +133,27 @@ input.addEventListener("input", handler);
 window.addEventListener("load", handler);
 window.addEventListener("resize", handler);
 window.addEventListener("scroll", handler);
+
+let count =0;
+
+const countDisplay = document.createElement("count");
+const increaseBtn = document.createElement("increase");
+const decreaseBtn = document.createElement("decrease");
+const resetBtn = document.createElement("reset");
+
+increaseBtn.addEventListerner("click", function () {
+  count++;
+  countDisplay.textContent = count;
+});
+
+decreaseBtn.addEventListerner("click", function () {
+  if (count > 0){
+      count--;
+      countDisplay.textcontent = count;
+  }
+})
+
+resetBtn.addEventListerner("click", function () {
+  count = 0;
+  countDisplay.textcontent = count;
+});
