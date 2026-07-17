@@ -184,3 +184,19 @@ document.querySelector("ul").addEventListener("click", function(event){
     handleClick(event);
   }
 });
+
+const form = document.geteLElementById("contact-form");
+  const nameInput =document.geteLElementById("name");
+  const emailInput =document.geteLElementById("email");
+
+
+nameInput.addEventListener("input", function(event) {
+    const value = event.target.value;
+    
+    if (value.length < 2) {
+      showError(nameInput, "Name must be at least 2 characters");
+    } else {
+      clearError(nameInput);
+    }
+  });
+
