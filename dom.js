@@ -64,3 +64,13 @@ article.append(newParagraph);
 firstParagraph.before(newParagraph);
 firstParagraph.after(newParagraph);
 
+const footer = document.querySelector('footer');
+footer.remove();
+
+const nav = document.querySelector('nav');
+const lastLink = nav.querySelector("li:last-child");
+lastLink.parentElement.removeChild(lastLink);
+
+while (article.firstChild) {
+  article.removeChild(article.firstChild);
+}
