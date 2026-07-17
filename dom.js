@@ -178,3 +178,9 @@ document.getElementById("parent").addEventListener("click", () => {
 document.getElementById("child").addEventListener("click", () => {
   console.log("child clicked");
 })
+
+document.querySelector("ul").addEventListener("click", function(event){
+  if (event.target.matches("li")) {
+    handleClick(event);
+  }
+});
