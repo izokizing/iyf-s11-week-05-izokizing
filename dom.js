@@ -91,3 +91,22 @@ function addNavItem(text, href) {
 
 addNavItem("Blog", "/blog");
 addNavItem("portfolio", "/portfolio");
+
+const button = document.createElement("button");
+button.textContent = "Click me!";
+document.body.appendChild(button);
+
+button.addEventListener("click", function() {
+  console.log("Button clicked!");
+});
+
+button.addEventListener("click", () => {
+  console.log("clicked again!");
+});
+
+function handleClick() {
+  console.log("Handled!");
+}
+button.addEventListener("click", handleClick);
+
+button.removeEventListener("click", handleClick);
