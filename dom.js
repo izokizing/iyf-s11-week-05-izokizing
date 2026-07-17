@@ -157,3 +157,12 @@ resetBtn.addEventListerner("click", function () {
   count = 0;
   countDisplay.textcontent = count;
 });
+
+<div id="grandparent">
+  Grandparent
+  <div id="parent">
+    <div id="child">
+      
+    </div>
+  </div>
+</div>
