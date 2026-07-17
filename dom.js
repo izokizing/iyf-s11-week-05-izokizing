@@ -166,3 +166,15 @@ resetBtn.addEventListerner("click", function () {
     </div>
   </div>
 </div>
+
+document.getElementById("grandparent").addEventListener("click", () => {
+  console.log("Grandparent clicked");
+})
+
+document.getElementById("parent").addEventListener("click", () => {
+  console.log("parent clicked");
+})
+
+document.getElementById("child").addEventListener("click", () => {
+  console.log("child clicked");
+})
