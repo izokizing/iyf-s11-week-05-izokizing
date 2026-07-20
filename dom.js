@@ -210,3 +210,25 @@ emailInput.addEventListener("input", function(event) {
       clearError(emailInput);
     }
   });
+
+ form.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const formData = naew FormData(form);
+    const data = object.fromEntries(formData);
+
+    console.log("Form data:", data);
+
+    if(isValid(data)) {
+      showSuccess("Form submitted successfully!");
+      form.reset();
+    }
+  });
+
+  function showError(input, message) {
+    input.classList.add("error");
+  }
+
+  function clearError(input) {
+    input.classList.remove("error")
+  }
